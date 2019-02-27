@@ -1,0 +1,65 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon Feb 26 09:10:33 2018
+| Host         : Wangxd running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    12 |
+| Minimum Number of register sites lost to control set restrictions |    34 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            5 |
+| No           | No                    | Yes                    |               4 |            1 |
+| No           | Yes                   | No                     |              96 |           24 |
+| Yes          | No                    | No                     |              23 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              37 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+---------------------------------+----------------------------------------+------------------+----------------+
+|      Clock Signal      |          Enable Signal          |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++------------------------+---------------------------------+----------------------------------------+------------------+----------------+
+|  count_reg[31]_i_4_n_0 |                                 |                                        |                2 |              3 |
+|  clk_IBUF_BUFG         |                                 |                                        |                3 |              3 |
+|  count_reg[31]_i_4_n_0 | S/next_state[3]_i_1_n_0         |                                        |                1 |              4 |
+|  count_reg[31]_i_4_n_0 | S/coin_val[3]_i_1_n_0           |                                        |                1 |              4 |
+|  count_reg[31]_i_4_n_0 | S/charge_val[3]_i_1_n_0         |                                        |                1 |              4 |
+|  S/nolabel_line41/CLK  |                                 | reset_IBUF                             |                1 |              4 |
+|  D/nolabel_line41/CLK  | D/sel[6]_i_1_n_0                | reset_IBUF                             |                2 |              5 |
+|  D/nolabel_line41/CLK  | D/FSM_sequential_sta[2]_i_1_n_0 |                                        |                8 |             11 |
+|  count_reg[31]_i_4_n_0 | S/count[31]_i_2_n_0             | S/count[31]_i_1_n_0                    |                9 |             32 |
+|  clk_IBUF_BUFG         |                                 | S/nolabel_line42/counter[0]_i_1__0_n_0 |                8 |             32 |
+|  clk_IBUF_BUFG         |                                 | S/nolabel_line41/clear                 |                8 |             32 |
+|  clk_IBUF_BUFG         |                                 | D/nolabel_line41/counter[0]_i_1__1_n_0 |                8 |             32 |
++------------------------+---------------------------------+----------------------------------------+------------------+----------------+
+
+

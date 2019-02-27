@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Sep 28 08:19:46 2017
+# Process ID: 9912
+# Log file: E:/Curriculum de/project_2/vivado.log
+# Journal file: E:/Curriculum de/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Curriculum de/project_2/project_2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/.xinstall/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 707.473 ; gain = 140.406
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:56:39
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746800A
+set_property PROGRAM.FILE {E:/Curriculum de/project_2/project_2.runs/impl_1/main.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {E:/Curriculum de/project_2/project_2.runs/impl_1/main.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+ERROR: [Labtools 27-3175] Target jsn-Nexys4DDR-210292746800A is no longer available.
+Please use disconnect_hw_server to close the current server connection. Check cable connectivity and that the target board is powered up.
+Restart the hw_server application running on host localhost, port 3121 and then use connect_hw_server to re-establish connection to target.
+close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost/xilinx_tcf/Digilent/210292746800A
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: main
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:39:15 . Memory (MB): peak = 803.332 ; gain = 631.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:21]
+	Parameter S0 bound to: 4'b0000 
+	Parameter S1 bound to: 4'b0001 
+	Parameter S2 bound to: 4'b0010 
+	Parameter S3 bound to: 4'b0011 
+	Parameter S4 bound to: 4'b0100 
+	Parameter S5 bound to: 4'b0101 
+	Parameter S6 bound to: 4'b0110 
+	Parameter S7 bound to: 4'b0111 
+	Parameter S8 bound to: 4'b1000 
+	Parameter S9 bound to: 4'b1001 
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:38]
+INFO: [Synth 8-638] synthesizing module 'State' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:22]
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:41]
+INFO: [Synth 8-638] synthesizing module 'divider' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000101111101011110000100000000 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:42]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized0' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000000000111101000010010000000 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized0' (1#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:71]
+INFO: [Synth 8-256] done synthesizing module 'State' (2#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:22]
+WARNING: [Synth 8-689] width (5) of port connection 'n_state' does not match port width (4) of module 'State' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:38]
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:39]
+INFO: [Synth 8-638] synthesizing module 'display' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:22]
+	Parameter S0 bound to: 4'b0000 
+	Parameter S1 bound to: 4'b0001 
+	Parameter S2 bound to: 4'b0010 
+	Parameter S3 bound to: 4'b0011 
+	Parameter S4 bound to: 4'b0100 
+	Parameter S5 bound to: 4'b0101 
+	Parameter S6 bound to: 4'b0110 
+	Parameter S7 bound to: 4'b0111 
+	Parameter S8 bound to: 4'b1000 
+	Parameter S9 bound to: 4'b1001 
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:41]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized1' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000000000001100001101010000000 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized1' (2#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:45]
+INFO: [Synth 8-256] done synthesizing module 'display' (3#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:22]
+WARNING: [Synth 8-689] width (5) of port connection 'n_state' does not match port width (4) of module 'display' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:39]
+INFO: [Synth 8-256] done synthesizing module 'main' (4#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:36 ; elapsed = 00:39:18 . Memory (MB): peak = 830.172 ; gain = 657.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:39:18 . Memory (MB): peak = 830.172 ; gain = 657.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-141] Inserted 19 OBUFs to IO ports without IO buffers.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:57 ; elapsed = 00:39:49 . Memory (MB): peak = 1142.566 ; gain = 970.289
+18 Infos, 8 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 1142.566 ; gain = 355.203
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: main
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:37 ; elapsed = 00:42:45 . Memory (MB): peak = 1147.105 ; gain = 974.828
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:21]
+	Parameter S0 bound to: 4'b0000 
+	Parameter S1 bound to: 4'b0001 
+	Parameter S2 bound to: 4'b0010 
+	Parameter S3 bound to: 4'b0011 
+	Parameter S4 bound to: 4'b0100 
+	Parameter S5 bound to: 4'b0101 
+	Parameter S6 bound to: 4'b0110 
+	Parameter S7 bound to: 4'b0111 
+	Parameter S8 bound to: 4'b1000 
+	Parameter S9 bound to: 4'b1001 
+INFO: [Synth 8-638] synthesizing module 'State' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:22]
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:41]
+INFO: [Synth 8-638] synthesizing module 'divider' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000101111101011110000100000000 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:42]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized0' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000000000111101000010010000000 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized0' (1#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:71]
+INFO: [Synth 8-256] done synthesizing module 'State' (2#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:22]
+WARNING: [Synth 8-689] width (5) of port connection 'n_state' does not match port width (4) of module 'State' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:38]
+INFO: [Synth 8-638] synthesizing module 'display' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:22]
+	Parameter S0 bound to: 4'b0000 
+	Parameter S1 bound to: 4'b0001 
+	Parameter S2 bound to: 4'b0010 
+	Parameter S3 bound to: 4'b0011 
+	Parameter S4 bound to: 4'b0100 
+	Parameter S5 bound to: 4'b0101 
+	Parameter S6 bound to: 4'b0110 
+	Parameter S7 bound to: 4'b0111 
+	Parameter S8 bound to: 4'b1000 
+	Parameter S9 bound to: 4'b1001 
+WARNING: [Synth 8-387] label required on module instance [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:41]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized1' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+	Parameter N bound to: 64'b0000000000000000000000000000000000000000000001100001101010000000 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized1' (2#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:45]
+INFO: [Synth 8-256] done synthesizing module 'display' (3#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v:22]
+WARNING: [Synth 8-689] width (5) of port connection 'n_state' does not match port width (4) of module 'display' [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:39]
+INFO: [Synth 8-256] done synthesizing module 'main' (4#1) [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:38 ; elapsed = 00:42:46 . Memory (MB): peak = 1147.105 ; gain = 974.828
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:38 ; elapsed = 00:42:46 . Memory (MB): peak = 1147.105 ; gain = 974.828
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/Curriculum de/project_2/project_2.srcs/constrs_1/imports/Verilog Lab/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-141] Inserted 19 OBUFs to IO ports without IO buffers.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:02:48 ; elapsed = 00:42:52 . Memory (MB): peak = 1236.664 ; gain = 1064.387
+17 Infos, 6 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1236.664 ; gain = 89.559
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 28 09:54:22 2017...

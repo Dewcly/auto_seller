@@ -1,0 +1,8 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/.xinstall/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 11977edb168b4b7fbcfd88ee36400c61 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot main_th_behav xil_defaultlib.main_th xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1047] module instantiation should have an instance name [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:41]
+ERROR: [VRFC 10-1047] module instantiation should have an instance name [E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v:42]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

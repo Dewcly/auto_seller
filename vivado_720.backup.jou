@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Feb 27 08:55:25 2018
+# Process ID: 880
+# Log file: F:/Curriculum de/auto_seller/vivado.log
+# Journal file: F:/Curriculum de/auto_seller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Curriculum de/auto_seller/project_2.xpr}

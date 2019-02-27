@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/start.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/State.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module State
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.srcs/sources_1/imports/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.srcs/sim_1/new/main_th.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_th
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Curriculum de/project_2/project_2.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

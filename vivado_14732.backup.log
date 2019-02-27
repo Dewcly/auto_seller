@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Sep 28 10:34:59 2017
+# Process ID: 9912
+# Log file: E:/学习/大三/数字逻辑课设/U201514588_王旭东/auto_seller/vivado.log
+# Journal file: E:/学习/大三/数字逻辑课设/U201514588_王旭东/auto_seller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/学习/大三/数字逻辑课设/U201514588_王旭东/auto_seller/project_2.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Curriculum de/project_2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/.xinstall/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 704.559 ; gain = 162.527
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 28 10:36:28 2017...
